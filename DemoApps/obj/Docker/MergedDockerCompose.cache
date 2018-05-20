@@ -1,0 +1,11 @@
+services:
+  webapp:
+    build:
+      context: C:\Users\ramon\Projects\dotnet2018\DemoApps
+      dockerfile: WebApp/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webapp
+    ports:
+    - target: 80
+version: '3.4'
