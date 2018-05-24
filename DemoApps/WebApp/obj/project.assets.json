@@ -2735,6 +2735,15 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "Polly/6.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Polly.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {}
+        }
+      },
       "Remotion.Linq/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -7684,6 +7693,23 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "Polly/6.0.1": {
+      "sha512": "nwL8qNLkrphkehUftQqJZOExH6sJ+PPWhkrksqoouAvy9TuEgYUjFujlUVC8PyYLIWIneR9R4opcFpPKn1HQ1A==",
+      "type": "package",
+      "path": "polly/6.0.1",
+      "files": [
+        "lib/netstandard1.1/Polly.deps.json",
+        "lib/netstandard1.1/Polly.dll",
+        "lib/netstandard1.1/Polly.pdb",
+        "lib/netstandard1.1/Polly.xml",
+        "lib/netstandard2.0/Polly.deps.json",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.pdb",
+        "lib/netstandard2.0/Polly.xml",
+        "polly.6.0.1.nupkg.sha512",
+        "polly.nuspec"
       ]
     },
     "Remotion.Linq/2.1.1": {
@@ -12658,27 +12684,29 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.8",
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.Extensions.DependencyInjection >= 2.0.0",
+      "Microsoft.NETCore.App >= 2.0.0",
+      "Polly >= 6.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ramon\\.nuget\\packages\\": {},
+    "C:\\Users\\rtomas\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramon\\Projects\\dotnet2018\\DemoApps\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\rtomas\\Projects\\dotnet2018\\DemoApps\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\ramon\\Projects\\dotnet2018\\DemoApps\\WebApp\\WebApp.csproj",
-      "packagesPath": "C:\\Users\\ramon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramon\\Projects\\dotnet2018\\DemoApps\\WebApp\\obj\\",
+      "projectPath": "C:\\Users\\rtomas\\Projects\\dotnet2018\\DemoApps\\WebApp\\WebApp.csproj",
+      "packagesPath": "C:\\Users\\rtomas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rtomas\\Projects\\dotnet2018\\DemoApps\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ramon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rtomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12706,10 +12734,18 @@
             "target": "Package",
             "version": "[2.0.8, )"
           },
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
+          },
+          "Polly": {
+            "target": "Package",
+            "version": "[6.0.1, )"
           }
         },
         "imports": [

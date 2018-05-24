@@ -1,8 +1,17 @@
 version: '3.4'
 
 services:
+  webapi:
+    image: ${DOCKER_REGISTRY}webapi
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+
   webapp:
     image: ${DOCKER_REGISTRY}webapp
     build:
       context: .
       dockerfile: WebApp/Dockerfile
+
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest

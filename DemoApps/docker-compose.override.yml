@@ -4,5 +4,22 @@ services:
   webapp:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ApiUrl=http://webapi
     ports:
-      - "80"
+      - "3000:80"
+
+  webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=${BEERS_DB_PROD:-Server=sql.data;Database=BeersDb;User Id=sa;Password=Pass@word}
+    ports:
+      - "3001:80"
+
+  sql.data:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433" 
