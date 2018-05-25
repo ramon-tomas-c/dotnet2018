@@ -19,7 +19,7 @@
     }
 
 
-    public class CatalogContextDesignFactory : IDesignTimeDbContextFactory<BeersContext>
+    public class BeersContextDesignFactory : IDesignTimeDbContextFactory<BeersContext>
     {
         public BeersContext CreateDbContext(string[] args)
         {

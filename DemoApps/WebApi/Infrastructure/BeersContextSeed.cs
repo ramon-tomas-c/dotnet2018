@@ -62,6 +62,24 @@ namespace WebApi.Infrastructure
                 },
                 new Beer()
                 {
+                    Name = "Dogfish Head",
+                    Country = "US",
+                    Code = "dogfish_head"
+                },
+                new Beer()
+                {
+                    Name = "Goose Island",
+                    Country = "US",
+                    Code = "goose_island"
+                },
+                new Beer()
+                {
+                    Name = "Mikkeller",
+                    Country = "Denmark",
+                    Code = "mikkeller"
+                },
+                new Beer()
+                {
                     Name = "Foster's Lager",
                     Country = "Australia",
                     Code = "foster's_lager"
