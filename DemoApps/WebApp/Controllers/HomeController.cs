@@ -32,17 +32,17 @@ namespace WebApp.Controllers
                              TimeSpan.FromSeconds(8)
                          });
 
-            await retry.ExecuteAsync(async () =>
+            using (var api = new HttpClient())
             {
-                using (var api = new HttpClient())
+                await retry.ExecuteAsync(async () =>
                 {
                     var response = await api.GetAsync($"{settings.Value.ApiUrl}/api/beers");
                     response.EnsureSuccessStatusCode();
                     var data = await response.Content.ReadAsStringAsync();
                     result = JsonConvert.DeserializeObject<List<BeerModel>>(data);
-                }
-            });
-            
+                });                
+            }
+                        
             return View(result);
         }       
 
