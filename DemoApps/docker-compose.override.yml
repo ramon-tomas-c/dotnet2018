@@ -3,24 +3,17 @@ version: '3.4'
 services:
   webapp:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ApiUrl=${API_URL_PROD:-http://webapi}
+      - ConnectionString=Server=sql.data;Database=eShopDatabase;User Id=sa;Password=Testing11@@
     ports:
-      - "3000:80"
-
-  webapi:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${BEERS_DB_PROD:-Server=sql.data;Database=BeersDb;User Id=sa;Password=Pass@word}
-      - BlobStorageUrl=${BLOB_STORAGE_URL_PROD:-https://dotnet2018dockerdemo.blob.core.windows.net/beers/}
-    ports:
-      - "3001:80"
-
+     - "83:83"
   sql.data:
     environment:
-      - SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Testing11@@
       - ACCEPT_EULA=Y
     ports:
-      - "5433:1433" 
+      - "5433:1433"
+      
+networks:
+  default:
+    external:
+      name: nat

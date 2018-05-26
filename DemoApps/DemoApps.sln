@@ -3,11 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{B4058031-6CF2-413F-9ADF-95C2D0D1105F}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Webapp", "Webapp\", "{609A0507-4940-46B0-B172-5FE68AF3D641}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50996"
+		Debug.AspNetCompiler.PhysicalPath = "Webapp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50996\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50996"
+		Release.AspNetCompiler.PhysicalPath = "Webapp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50996\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50996"
+		SlnRelativePath = "Webapp\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{A0B21FC0-1298-499D-A9C0-D86DCEB57E4A}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{69318DEE-B287-4372-8228-500F237515DE}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DDCFFC03-747F-4F15-93CC-93EDC8014419}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +33,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B4058031-6CF2-413F-9ADF-95C2D0D1105F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4058031-6CF2-413F-9ADF-95C2D0D1105F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4058031-6CF2-413F-9ADF-95C2D0D1105F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4058031-6CF2-413F-9ADF-95C2D0D1105F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0B21FC0-1298-499D-A9C0-D86DCEB57E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0B21FC0-1298-499D-A9C0-D86DCEB57E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0B21FC0-1298-499D-A9C0-D86DCEB57E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0B21FC0-1298-499D-A9C0-D86DCEB57E4A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69318DEE-B287-4372-8228-500F237515DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69318DEE-B287-4372-8228-500F237515DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69318DEE-B287-4372-8228-500F237515DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69318DEE-B287-4372-8228-500F237515DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{609A0507-4940-46B0-B172-5FE68AF3D641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609A0507-4940-46B0-B172-5FE68AF3D641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609A0507-4940-46B0-B172-5FE68AF3D641}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{609A0507-4940-46B0-B172-5FE68AF3D641}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{DDCFFC03-747F-4F15-93CC-93EDC8014419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDCFFC03-747F-4F15-93CC-93EDC8014419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDCFFC03-747F-4F15-93CC-93EDC8014419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDCFFC03-747F-4F15-93CC-93EDC8014419}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
