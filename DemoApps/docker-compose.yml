@@ -1,13 +1,13 @@
 version: '3.4'
 
 services:
-  webapp:
-    image: webapp
+  webforms:
+    image: ${DOCKER_REGISTRY}webforms
     build:
-      context: .
-      dockerfile: Webapp/Dockerfile
+      context: .\WebForms
+      dockerfile: Dockerfile
     depends_on:
       - sql.data
 
   sql.data:
-    image: microsoft/mssql-server-windows-developer
+    image: microsoft/mssql-server-windows-developer:2017-latest

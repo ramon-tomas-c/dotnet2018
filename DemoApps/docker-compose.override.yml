@@ -1,18 +1,20 @@
 version: '3.4'
 
 services:
-  webapp:
+  webforms:
     environment:
-      - ConnectionString=Server=sql.data;Database=eShopDatabase;User Id=sa;Password=Testing11@@
+      - ConnectionString=${BEERS_DB_PROD:-Server=sql.data;Database=eShopDatabase;User Id=sa;Password=Testing11@@}
+      - BlobStorageUrl=${BLOB_STORAGE_URL_PROD:-https://dotnet2018dockerdemo.blob.core.windows.net/beers/}
     ports:
      - "83:83"
+
   sql.data:
     environment:
       - SA_PASSWORD=Testing11@@
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-      
+
 networks:
   default:
     external:

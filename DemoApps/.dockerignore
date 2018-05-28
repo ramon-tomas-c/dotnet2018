@@ -28,6 +28,7 @@ cli-linux
 **/node_modules/
 **/bower_components/
 **/wwwroot/lib/
+!Webapp/obj/Docker/publish
 !**/wwwroot/lib/signalr/*
 !**/wwwroot/lib/toastr/*
 global.json
