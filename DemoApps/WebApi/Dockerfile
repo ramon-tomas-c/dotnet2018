@@ -8,10 +8,14 @@ COPY WebApi/WebApi.csproj WebApi/
 RUN dotnet restore WebApi/WebApi.csproj
 COPY . .
 WORKDIR /src/WebApi
-RUN dotnet build WebApi.csproj -c Release -o /app
+RUN dotnet build WebApi.csproj --no-restore -c Release -o /app
+
+FROM build as test
+WORKDIR /src/WebApi.Tests
+
 
 FROM build AS publish
-RUN dotnet publish WebApi.csproj -c Release -o /app
+RUN dotnet publish WebApi.csproj --no-restore -c Release -o /app
 
 FROM base AS final
 WORKDIR /app

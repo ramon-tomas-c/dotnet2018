@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WebApi.Infrastructure;
+using WebApi.Services;
 
 namespace WebApi
 {
@@ -37,6 +38,8 @@ namespace WebApi
                                          sqlOptions.EnableRetryOnFailure(maxRetryCount: 10, maxRetryDelay: TimeSpan.FromSeconds(30), errorNumbersToAdd: null);
                                      });
             });
+
+            services.AddTransient<IBeersService, BeersService>();
 
             services.AddMvc();
         }

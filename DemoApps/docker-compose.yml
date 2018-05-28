@@ -17,5 +17,18 @@ services:
     depends_on:
       - sql.data
 
+  webapi-tests:
+    image: ${DOCKER_REGISTRY}webapi.tests
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+      target: test
+    volumes: 
+      - ${BUILD_ARTIFACTSTAGINGDIRECTORY:-./tests-results/}:/tests
+    depends_on:
+      - sql.data
+
+
+
   sql.data:
     image: microsoft/mssql-server-linux:2017-latest

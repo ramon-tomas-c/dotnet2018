@@ -18,6 +18,19 @@ services:
     ports:
       - "3001:80"
 
+  webapi-tests:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionString=${BEERS_DB_PROD:-Server=sql.data;Database=BeersDb;User Id=sa;Password=Pass@word}
+      - BlobStorageUrl=${BLOB_STORAGE_URL_PROD:-https://dotnet2018dockerdemo.blob.core.windows.net/beers/}
+    ports:
+      - "80"
+    entrypoint:
+      - dotnet
+      - test
+      - --logger
+      - trx;LogFileName=/tests/test-results.xml
+
   sql.data:
     environment:
       - SA_PASSWORD=Pass@word
