@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -19,7 +20,7 @@ namespace WebForms
                         Code = s.Code,
                         Country = s.Country,
                         Name = s.Name,
-                        ImageUrl = $"{AppConfiguration.BlobStorageUrl}{s.Code}.jpg"
+                        ImageUrl = $"{ ConfigurationManager.AppSettings["BlobStorageUrl"]}{s.Code}.jpg"
 
                     });
 

@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Configuration;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 
 /// <summary>
@@ -6,7 +7,7 @@ using System.Data.Entity.ModelConfiguration;
 /// </summary>
 public class BeersContext : DbContext
 {
-    public BeersContext() : base(AppConfiguration.ConnectionString)
+    public BeersContext() : base(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString)
     {
         
     }
