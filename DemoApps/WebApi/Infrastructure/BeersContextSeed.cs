@@ -83,6 +83,30 @@ namespace WebApi.Infrastructure
                     Name = "Foster's Lager",
                     Country = "Australia",
                     Code = "foster's_lager"
+                },
+                new Beer()
+                {
+                    Name = "Impaled",
+                    Country = "Spain",
+                    Code = "impaled"
+                },
+                new Beer()
+                {
+                    Name = "Devil's IPA",
+                    Country = "Spain",
+                    Code = "devils"
+                },
+                new Beer()
+                {
+                    Name = "Ibuprofano",
+                    Country = "Spain",
+                    Code = "ibuprofano",
+                },
+                new Beer()
+                {
+                    Name = "Malavida",
+                    Country = "Spain",
+                    Code = "malavida"
                 }
             };
         }       

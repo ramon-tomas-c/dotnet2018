@@ -15,6 +15,10 @@ services:
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${BEERS_DB_PROD:-Server=sql.data;Database=BeersDb;User Id=sa;Password=Pass@word}
       - BlobStorageUrl=${BLOB_STORAGE_URL_PROD:-https://dotnet2018dockerdemo.blob.core.windows.net/beers/}
+      - UseKeyVault=${USEKEYVAULT:-False}
+      - Vault__Name=${VAULT__NAME:-""}
+      - Vault__ClientId=${Vault__CLIENTID:-""}
+      - Vault__ClientSecret=${VAULT__CLIENTSECRET:-""}
     ports:
       - "3001:80"
 

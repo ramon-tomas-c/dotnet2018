@@ -9,5 +9,15 @@ namespace WebApi
     {
         public string ConnectionString { get; set; }
         public string BlobStorageUrl { get; set; }
+
+        public bool UseKeyVault { get; set; }
+
+        public VaultSettings Vault { get; set; }
+    }
+
+    public class VaultSettings
+    {
+        public string Name { get; set; }
+        public string ClientId { get; set; }
     }
 }
