@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using BeatPulse;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,10 @@ namespace WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<Settings>(Configuration);
+            services.AddBeatPulse(options =>
+            {
+                options.AddSqlServer(Configuration["ConnectionString"]);
+            });
 
             services.AddDbContext<BeersContext>(options =>
             {

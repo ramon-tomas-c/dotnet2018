@@ -22,6 +22,7 @@ namespace WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<Settings>(Configuration);
+            services.AddBeatPulse();
             services.AddMvc();
         }
 

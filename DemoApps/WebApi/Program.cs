@@ -22,6 +22,10 @@ namespace WebApi
         public static IWebHost BuildWebHost(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args)
+                .UseBeatPulse(options =>
+                {
+                    options.EnableDetailedOutput();
+                })
                 .ConfigureAppConfiguration((context, config) =>
                 {
                     var builtConfig = config.Build();
