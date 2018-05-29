@@ -264,3 +264,5 @@ pub/
 /src/Web/WebMVC/wwwroot/css/site.min.css
 **/.kube/**
 .mfractor
+
+DemoApps/WebApp/obj/Debug/**
